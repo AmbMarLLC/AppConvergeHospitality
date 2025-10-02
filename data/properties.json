@@ -1,0 +1,251 @@
+{
+  "Properties": [
+    {
+      "id": 1,
+      "location": "Corporate Office",
+      "address": "2244 County Road 12, Erie, CO 80516",
+      "code": "N/A",
+      "slug": "corporate"
+    },
+    {
+      "id": 2,
+      "location": "La Posada Lodge & Casitas - Tucson, AZ",
+      "address": "5900 N Oracle Rd, Tucson, AZ 85704",
+      "code": "az.389",
+      "email": "will@convergehospitality.com",
+      "slug": "la-posada-lodge-casitas-tucson-az"
+    },
+    {
+      "id": 3,
+      "location": "Fairfield Inn & Suites by Marriott - Aurora, CO",
+      "address": "13851 E Harvard Ave, Aurora, CO 80014",
+      "code": "DENAU",
+      "email": "nick@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-aurora-co"
+    },
+    {
+      "id": 4,
+      "location": "Fairfield Inn & Suites by Marriott - Denver Airport at Gateway Park",
+      "address": "16191 E 40th Ave, Denver, CO 80239",
+      "code": "DENFY",
+      "email": "will@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-denver-airport-at-gateway-park"
+    },
+    {
+      "id": 5,
+      "location": "Holiday Inn Express & Suites - Firestone, CO",
+      "address": "11256 Business Park Cir, Firestone, CO 80504",
+      "code": "QWMFS",
+      "email": "nick@convergehospitality.com",
+      "slug": "holiday-inn-express-suites-firestone-co"
+    },
+    {
+      "id": 6,
+      "location": "EVEN Hotel by IHG - Denver Tech Center - Englewood, CO",
+      "address": "7380 S Clinton St, Englewood, CO 80112",
+      "code": "DENEW",
+      "email": "nick@convergehospitality.com",
+      "slug": "even-hotel-by-ihg-denver-tech-center-englewood-co"
+    },
+    {
+      "id": 7,
+      "location": "La Quinta Inn & Suites by Wyndham - Rifle, CO",
+      "address": "600 Wapiti Ct, Rifle, CO 81650",
+      "code": "52686",
+      "email": "nick@convergehospitality.com",
+      "slug": "la-quinta-inn-suites-by-wyndham-rifle-co"
+    },
+    {
+      "id": 8,
+      "location": "Comfort Suites by Choice Hotels - Boulder, CO",
+      "address": "4777 Broadway, Boulder, CO 80304",
+      "code": "CO.439",
+      "email": "",
+      "slug": "comfort-suites-by-choice"
+    },
+    {
+      "id": 9,
+      "location": "Boulder University Inn - Boulder, CO",
+      "address": "1632 Broadway, Boulder, CO 80302",
+      "code": "N/A",
+      "email": "",
+      "slug": "boulder-university-inn-boulder-co"
+    },
+    {
+      "id": 10,
+      "location": "Fairfield Inn & Suites by Marriott - Des Moines, IA",
+      "address": "207 Crocker St, Des Moines, IA 50309",
+      "code": "DSMFD",
+      "email": "steve@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-des-moines-ia"
+    },
+    {
+      "id": 11,
+      "location": "Fairfield Inn & Suites by Marriott - Norwalk, IA",
+      "address": "2100 Hughes Dr, Norwalk, IA 50211",
+      "code": "DSMNF",
+      "email": "steve@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-norwalk-ia"
+    },
+    {
+      "id": 12,
+      "location": "Fairfield Inn & Suites by Marriott - Cedar Rapids, IA",
+      "address": "605 32nd Ave SW, Cedar Rapids, IA 52404",
+      "code": "CIDFN",
+      "email": "steve@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-cedar-rapids-ia"
+    },
+    {
+      "id": 13,
+      "location": "Fairfield Inn & Suites by Marriott - Detroit Lakes, MN",
+      "address": "102 W Lake Dr, Detroit Lakes, MN 56501",
+      "code": "DTLFI",
+      "email": "steve@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-detroit-lakes-mn"
+    },
+    {
+      "id": 14,
+      "location": "Fairfield Inn & Suites by Marriott - Duluth, MN",
+      "address": "1510 Maple Grove Rd, Duluth, MN 55811",
+      "code": "DLFHW",
+      "email": "steve@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-duluth-mn"
+    },
+    {
+      "id": 15,
+      "location": "SpringHill Suites by Marriott - Kansas City Airport - Kansas City, MO",
+      "address": "8303 N Stoddard Ave, Kansas City, MO 64152",
+      "code": "MCINR",
+      "email": "steve@convergehospitality.com",
+      "slug": "springhill-suites-by-marriott-kansas-city-airport-kansas-city-mo"
+    },
+    {
+      "id": 16,
+      "location": "Fairfield Inn & Suites - North Platte, NE",
+      "address": "319 W South River Rd, North Platte, NE 69101",
+      "code": "LBFFI",
+      "email": "nick@convergehospitality.com",
+      "slug": "fairfield-inn-suites-north-platte-ne"
+    },
+    {
+      "id": 17,
+      "location": "Hampton Inn & Suites by Hilton - Artesia, NM",
+      "address": "2501 S Permian Pavilion Ave, Artesia, NM 88210",
+      "code": "OMALV",
+      "email": "will@convergehospitality.com",
+      "slug": "hampton-inn-suites-by-hilton-artesia-nm"
+    },
+    {
+      "id": 18,
+      "location": "Hampton Inn & Suites by Hilton - Carlsbad, NM",
+      "address": "120 Esperanza Cir, Carlsbad, NM 88220",
+      "code": "CNMNM",
+      "email": "will@convergehospitality.com",
+      "slug": "hampton-inn-suites-by-hilton-carlsbad-nm"
+    },
+    {
+      "id": 19,
+      "location": "Holiday Inn Express & Suites - Jenks, OK",
+      "address": "150 Aquarium Dr, Jenks, OK 74037",
+      "code": "TULJS",
+      "email": "will@convergehospitality.com",
+      "slug": "holiday-inn-express-suites-jenks-ok"
+    },
+    {
+      "id": 20,
+      "location": "Fairfield Inn & Suites by Marriott - Tulsa South Medical District - Tulsa, OK",
+      "address": "9150 S 102nd E Ave, Tulsa, OK 74133",
+      "code": "TULCR",
+      "email": "will@convergehospitality.com",
+      "slug": "fairfield-inn-suites-by-marriott-tulsa-south-medical-district-tulsa-ok"
+    },
+    {
+      "id": 21,
+      "location": "GLO - Best Western - Enid, OK",
+      "address": "123 W Maine St, Enid, OK 73701",
+      "code": "37140",
+      "email": "will@convergehospitality.com",
+      "slug": "glo-best-western-enid-ok"
+    },
+    {
+      "id": 22,
+      "location": "Residence Inn Norman - Norman, OK",
+      "address": "2400 Conference Dr, Norman, OK 73069",
+      "code": "OKCRN",
+      "email": "will@convergehospitality.com",
+      "slug": "residence-inn-norman-norman-ok"
+    },
+    {
+      "id": 23,
+      "location": "Courtyard Sherman - Sherman, TX",
+      "address": "4344 N Loy Lake Rd, Sherman, TX 75092",
+      "code": "PNxCY",
+      "email": "will@convergehospitality.com",
+      "slug": "courtyard-sherman-sherman-tx"
+    },
+    {
+      "id": 24,
+      "location": "Woodsprings Suites Fargo - Fargo, ND",
+      "address": "1090 35th St N, Fargo, ND 58102",
+      "code": "ND.114",
+      "email": "steve@convergehospitality.com",
+      "slug": "woodsprings-suites-fargo-fargo-nd"
+    },
+    {
+      "id": 25,
+      "location": "Fairfield Inn and Suites Durant - Durant, OK",
+      "address": "2112 W Main St, Durant, OK 74701",
+      "code": "DALDU",
+      "email": "will@convergehospitality.com",
+      "slug": "fairfield-inn-and-suites-durant-durant-ok"
+    },
+    {
+      "id": 26,
+      "location": "Hampton Inn and Suites Omaha La Vista - La Vista, NE",
+      "address": "12331 Southport Pkwy, La Vista, NE 68128",
+      "code": "OMALV",
+      "email": "nick@convergehospitality.com",
+      "slug": "hampton-inn-and-suites-omaha-la-vista-la-vista-ne"
+    },
+    {
+      "id": 27,
+      "location": "Fairfield Inn and Suites Westminster - Westminster, CO",
+      "address": "12080 N Melody Dr, Westminster, CO 80234",
+      "code": "DENWT",
+      "email": "nick@convergehospitality.com",
+      "slug": "fairfield-inn-and-suites-westminster-westminster-co"
+    },
+    {
+      "id": 28,
+      "location": "Fairfield Inn and Suites Fort Collins - Fort Collins, CO",
+      "address": "3520 Timberwood Dr, Fort Collins, CO 80528",
+      "code": "FTCFF",
+      "email": "nick@convergehospitality.com",
+      "slug": "fairfield-inn-and-suites-fort-collins-fort-collins-co"
+    },
+    {
+      "id": 29,
+      "location": "Loge Wolf Creek - South Fork, CO",
+      "address": "31042 US-160, South Fork, CO 81154",
+      "code": "N/A",
+      "email": "nick@convergehospitality.com",
+      "slug": "loge-wolf-creek-south-fork-co"
+    },
+    {
+      "id": 30,
+      "location": "Hampton inn Suites Tulsa Central - Tulsa, OK",
+      "address": "3418 S. 79th East Avenue, Tulsa, OK 74145",
+      "code": "TULCE",
+      "email": "will@convergehospitality.com",
+      "slug": "Hampton-inn-Suites-Tulsa-Central"
+    },
+    {
+      "id": 31,
+      "location": "Aloft Westminster - Westminster, CO",
+      "address": "14780 Delaware St, Westminster, CO 80023",
+      "code": "DENAN",
+      "email": "will@convergehospitality.com",
+      "slug": "aloft-westminster-westminster-co"
+    }
+  ]
+}

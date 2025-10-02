@@ -1,0 +1,31 @@
+meta {
+  name: Create new incident
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/incidents
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+    "incidentDescription": "Mark",
+    "emergencyServicesData": {
+      "emergencyServices": "Police",
+      "emergencyServicesCYes": true,
+      "emergencyServicesCNo": false
+    },
+    "incidentTimeData": {
+      "incidentTime": "5:15 pm",
+      "incidentDate": "01/02/2025"
+    }
+  }
+}
+
+body:multipart-form {
+  uploadedFiles[]: @file(/Users/markjensen/Desktop/Screenshot 2025-09-12 at 2.35.55 PM.png|/Users/markjensen/Desktop/Screenshot 2025-09-13 at 3.12.21 PM.png)
+  data: {"checkboxState":{"theft":false,"propertyDamage":false,"injury":false,"declined":false,"firstaid":false,"medicalTreatment":false,"emergencyTreatment":false},"personalInfoData":{"affectedName":"affectedName","affectedAddress":"affectedAddress","affectedPhone":"affectedPhone","affectedEmail":"test@test.com","affiliation":"affiliation","guest":false,"employee":false,"vendor":false},"incidentTimeData":{"incidentTime":"13:31","incidentDate":"2025-09-04"},"peopleInvolvedData":{"otherName1":"","otherName2":"","otherName3":"","otherPhone1":"","otherPhone2":"","otherPhone3":""},"witnessesData":{"witnessName1":"","witnessName2":"","witnessName3":"","witnessPhone1":"","witnessPhone2":"","witnessPhone3":""},"emergencyServicesData":{"emergencyServicesCYes":false,"emergencyServicesCNo":false,"emergencyServices":""},"incidentDescription":"test incident","theftData":{"stolenItem":"","stolenItemValue":"","compensation":"","compensationYes":false,"compensationNo":false},"propertyDamageData":{"weather":"","guestImpact":"","restorationCompany":"","photosYes":false,"photosNo":false},"medicalData":{"physicianName":"","physicianAddress":"","DOB":"","shoes":"","training":"","daysOff":"","returnDate":""},"authorInformation":{"author":"Ambur Jensen","authorEmail":"test@test.com","authorPhone":"7195026835","authorPosition":"VP of Operational Excellence","authorProperty":"Corporate"},"id":null}
+}

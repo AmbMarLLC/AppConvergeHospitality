@@ -1,0 +1,123 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              Int     @id @default(autoincrement())
+  name            String?
+  email           String  @unique
+  phone           String
+  username        String  @unique
+  password        String
+  property        String
+  propertyAddress String
+  propertyCode    String
+  position        String
+  active          Boolean
+}
+
+model fileData {
+  id               String         @id @default(uuid())
+  createdAt        DateTime       @default(now())
+  fileName         String
+  fileUrl          String
+  incidentReportId String
+  blobUrl          String   // internal identifier for deletes
+  incidentReport   incidentReport @relation(fields: [incidentReportId], references: [id], onDelete: Cascade)
+}
+
+model incidentReport {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+
+  // User Information
+  author         String?
+  authorEmail    String?
+  authorPhone    String?
+  authorPosition String?
+  authorProperty String?
+
+  // Checkboxes 
+  theft              Boolean
+  propertyDamage     Boolean?
+  injury             Boolean
+  declined           Boolean
+  firstaid           Boolean
+  medicalTreatment   Boolean
+  emergencyTreatment Boolean
+
+  // Personal Information
+  affectedName    String
+  affectedAddress String
+  affectedPhone   String
+  affectedEmail   String
+  affiliation     String
+  guest           Boolean
+  employee        Boolean
+  vendor          Boolean
+
+  // Tame & Date
+  incidentTime String?
+  incidentDate String?
+
+  // Emergency Services
+  emergencyServices     String
+  emergencyServicesCYes Boolean
+  emergencyServicesCNo  Boolean
+
+  // Description
+  incidentDescription String
+
+  //People Involved
+  otherName1  String
+  otherPhone1 String
+  otherName2  String
+  otherPhone2 String
+  otherName3  String
+  otherPhone3 String
+
+  // Witness
+  witnessName1  String
+  witnessPhone1 String
+  witnessName2  String
+  witnessPhone2 String
+  witnessName3  String
+  witnessPhone3 String
+
+  // Theft
+  stolenItem      String
+  stolenItemValue String
+  compensation    String
+  compensationYes Boolean
+  compensationNo  Boolean
+
+  // Property Damage
+  weather            String
+  guestImpact        String
+  restorationCompany String
+  photosYes          Boolean
+  photosNo           Boolean
+
+  // Medical
+  physicianName    String
+  physicianAddress String
+  DOB              String
+  shoes            String
+  training         String
+  daysOff          String
+  returnDate       String
+
+  // Additional Information
+  fileData         fileData[]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "incident_report_system",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^6.2.1",
+    "@prisma/client": "^6.16.2",
+    "@prisma/extension-accelerate": "^2.0.2",
+    "@vercel/blob": "^2.0.0",
+    "antd": "^5.22.5",
+    "next": "^15",
+    "next-auth": "^4.24.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "resend": "^4.5.1",
+    "vercel": "^48.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "prisma": "^6.16.2",
+    "tailwindcss": "^3.3.0"
+  }
+}
