@@ -68,7 +68,10 @@ export async function POST(request) {
     // Upload files to Vercel Blob
     const files = formData.getAll("uploadedFiles[]");
     for (const file of files) {
-      const blob = await put(file.name, file, {
+      // Create folder path using incident ID
+      const folderPath = `incidents/${incidentReport.id}/${file.name}`;
+
+      const blob = await put(folderPath, file, {
         access: "public",
         addRandomSuffix: true,
       });
