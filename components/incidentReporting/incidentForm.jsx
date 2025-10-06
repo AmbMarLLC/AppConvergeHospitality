@@ -99,6 +99,13 @@ const IncidentForm = () => {
         daysOff: data.daysOff,
         returnDate: data.returnDate,
       });
+      setAuthorInformation({
+        author: data.author,
+        authorEmail: data.authorEmail,
+        authorPhone: data.authorPhone,
+        authorPosition: data.authorPosition,
+        authorProperty: data.authorProperty,
+      });
       setIncidentDescription(data.incidentDescription || "");
     };
 
@@ -197,7 +204,7 @@ const IncidentForm = () => {
   });
 
   useEffect(() => {
-    if (session) {
+    if (session && !id) {
       setAuthorInformation({
         author: session?.user?.name,
         authorEmail: session?.user?.email,
@@ -206,7 +213,7 @@ const IncidentForm = () => {
         authorProperty: session?.user?.property,
       });
     }
-  }, [session]);
+  }, [session, id]);
 
   useEffect(() => {
     const performFetch = async () => {
@@ -334,10 +341,8 @@ const IncidentForm = () => {
                       .toLowerCase()
                       .includes(input.toLowerCase())
                   }
-                  defaultValue={{
-                    value: "corporate",
-                    label: "Corporate",
-                  }}
+                  // Set value to authorInformation.authorProperty (from DB if editing)
+                  value={authorInformation.authorProperty || "corporate"}
                   options={[
                     ...propertiesData.Properties.map((property) => ({
                       value: property.slug,
