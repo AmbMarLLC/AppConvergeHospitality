@@ -45,7 +45,7 @@ const EditFileDownloads = ({ fileData }) => {
   return (
     <>
       <h2 className="text-lg font-semibold">Attached files</h2>
-      <div className="mt-4 space-y-2">
+      <div className="mb-4 space-y-2">
         {files.map((file) => (
           <div
             key={file.id}

@@ -433,7 +433,12 @@ const IncidentForm = () => {
             </div>
           )}
           {incidentData?.fileData && (
-            <EditFileDownloads fileData={incidentData.fileData} />
+            <>
+              <div className="mt-4">
+                <FileUpload />
+              </div>
+              <EditFileDownloads fileData={incidentData.fileData} />
+            </>
           )}
 
           <button
