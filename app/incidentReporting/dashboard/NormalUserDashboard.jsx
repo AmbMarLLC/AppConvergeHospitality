@@ -31,39 +31,41 @@ const NormalUserDashboard = () => {
 
   return (
     <>
-      <div className="grid grid-cols-5 gap-4">
-        <div className="col-span-1">
-          <div className="sticky top-20">
+      <div className="flex flex-col lg:grid lg:grid-cols-5 gap-4 lg:gap-6">
+        <div className="lg:col-span-1 order-2 lg:order-1">
+          <div className="lg:sticky lg:top-20">
             <Menu />
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="lg:col-span-4 order-1 lg:order-2">
           <div key={session.user.id}>
             <div className="pb-4 space-y-4">
-              <h1 className="text-xl font-bold text-gray-900">
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Welcome {session.user.name}
               </h1>
-              <h2 className="text-lg text-gray-700">
+              <h2 className="text-base sm:text-lg text-gray-700">
                 {session.user.position} at {session.user.property}
               </h2>
-              <p className="text-gray-700">
+              <p className="text-sm sm:text-base text-gray-700">
                 Here you can see all the incident reports created for your
                 property.
               </p>
-              <hr className="my-6" />
+              <hr className="my-4 lg:my-6" />
             </div>
-            {incident.map((incident) => (
-              <IncidentCard
-                key={incident.id}
-                description={incident.incidentDescription}
-                id={incident.id}
-                author={incident.author}
-                authorPosition={incident.authorPosition}
-                authorProperty={incident.authorProperty}
-                incidentTime={incident.incidentTime}
-                incidentDate={incident.incidentDate}
-              />
-            ))}
+            <div className="space-y-4">
+              {incident.map((incident) => (
+                <IncidentCard
+                  key={incident.id}
+                  description={incident.incidentDescription}
+                  id={incident.id}
+                  author={incident.author}
+                  authorPosition={incident.authorPosition}
+                  authorProperty={incident.authorProperty}
+                  incidentTime={incident.incidentTime}
+                  incidentDate={incident.incidentDate}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

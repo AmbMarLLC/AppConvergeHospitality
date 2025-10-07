@@ -6,9 +6,9 @@ import { SessionProvider } from "@node_modules/next-auth/react";
 export const MainLayout = ({ children, session }) => {
   return (
     <html lang="en" className="h-full">
-      <body>
+      <body className="h-full">
         <SessionProvider session={session}>
-          <main className="app max-w-[90%] px-4 leading-normal mb-12 mx-auto mt-0">
+          <main className="app w-full max-w-7xl px-4 sm:px-6 lg:px-8 leading-normal mb-12 mx-auto mt-0 min-h-screen">
             {children}
           </main>
         </SessionProvider>

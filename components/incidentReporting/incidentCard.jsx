@@ -35,17 +35,17 @@ const IncidentCard = (props) => {
 
   return (
     <Link href={`/incidentReporting/incidentReport/${id}`}>
-      <div className="bg-slate-200 p-5 rounded-xl w-full mx-auto cursor-pointer hover:shadow-lg hover:bg-slate-300 transition-all duration-200 ease-in-out mb-4">
-        <div className="flex items-center justify-between pb-4 border-b">
+      <div className="bg-slate-200 p-4 sm:p-5 rounded-xl w-full mx-auto cursor-pointer hover:shadow-lg hover:bg-slate-300 transition-all duration-200 ease-in-out mb-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-4 border-b space-y-2 sm:space-y-0">
           <div className="flex flex-col">
-            <p>
+            <p className="text-sm sm:text-base">
               <strong>Incident ID:</strong> {id}
             </p>
-            <p className="text-gray-700 text-sm">
+            <p className="text-gray-700 text-xs sm:text-sm">
               <strong>Property: {authorProperty}</strong>
             </p>
           </div>
-          <div className="ml-6 flex flex-col text-right text-sm text-gray-600">
+          <div className="flex flex-col sm:ml-6 sm:text-right text-xs sm:text-sm text-gray-600">
             <p>
               <strong>Incident Date:</strong> {incidentDate}
             </p>
@@ -55,17 +55,21 @@ const IncidentCard = (props) => {
           </div>
         </div>
 
-        <div className="mt-3 text-sm text-gray-700">
+        <div className="mt-3 text-xs sm:text-sm text-gray-700 space-y-1">
           <p className="font-semibold">Created by: {author}</p>
           <p>
             {authorPosition} at {authorProperty}
           </p>
-          <p>Phone number: {formatPhoneNumber(authorPhone)}</p>
+          {authorPhone && <p>Phone number: {formatPhoneNumber(authorPhone)}</p>}
         </div>
 
         <div className="mt-4">
-          <p className="text-gray-800 font-semibold">Incident Description:</p>
-          <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
+          <p className="text-gray-800 font-semibold text-sm sm:text-base">
+            Incident Description:
+          </p>
+          <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mt-1">
+            {description}
+          </p>
         </div>
       </div>
     </Link>
