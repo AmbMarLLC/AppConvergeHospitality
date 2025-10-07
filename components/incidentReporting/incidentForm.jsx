@@ -254,37 +254,38 @@ const IncidentForm = () => {
         (property) => property.slug === authorInformation.authorProperty
       )?.email;
 
-      if (!propertyEmail) {
-        alert("Invalid property selected. Please check your property.");
-        return;
+      // Only send email if the property has an email address
+      if (propertyEmail) {
+        // Send email via the API route
+        const res = await fetch("/api/email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            propertyEmail: propertyEmail,
+            author: authorInformation.author,
+            authorEmail: authorInformation.authorEmail,
+            authorPhone: authorInformation.authorPhone,
+            authorPosition: authorInformation.authorPosition,
+            authorProperty: authorInformation.authorProperty,
+            incidentTime: incidentTimeData.incidentTime,
+            incidentDate: incidentTimeData.incidentDate,
+            incidentDescription,
+          }),
+        });
+
+        const result = await res.json();
+        if (!result.success) {
+          alert(
+            "Something went wrong with email notification. Please try again later."
+          );
+          return;
+        }
+
+        alert("Your incident has been submitted and email notification sent!");
+      } else {
+        // No email address for this property, just confirm submission
+        alert("Your incident has been submitted successfully!");
       }
-
-      // Send email via the API route
-      const res = await fetch("/api/email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          propertyEmail: propertyEmail,
-          author: authorInformation.author,
-          authorEmail: authorInformation.authorEmail,
-          authorPhone: authorInformation.authorPhone,
-          authorPosition: authorInformation.authorPosition,
-          authorProperty: authorInformation.authorProperty,
-          incidentTime: incidentTimeData.incidentTime,
-          incidentDate: incidentTimeData.incidentDate,
-          incidentDescription,
-        }),
-      });
-
-      // console.log(propertyEmail);
-
-      const result = await res.json();
-      if (!result.success) {
-        alert("Something went wrong. Please try again later.");
-        return;
-      }
-
-      alert("Your message has been sent!");
 
       const response = await fetch("/api/incidents", {
         method: "POST",
